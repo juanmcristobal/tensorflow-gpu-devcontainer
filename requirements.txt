@@ -1,0 +1,12 @@
+# Essential libraries
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+plotly
+
+# For Deep Learning
+keras
+
+
