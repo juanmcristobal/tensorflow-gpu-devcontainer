@@ -1,38 +1,24 @@
 # Development Environment with DevContainer
 
-This project provides a pre-configured development environment using **DevContainer**, based on a Python Docker image with TensorFlow and Jupyter pre-installed. It is ideal for projects requiring GPU processing and deep learning.
-
-![alt text](nvidia-smi.png)
+This template provides a pre-configured development environment using DevContainer, based on an image with TensorFlow and Jupyter pre-installed. It is ideal for those looking to learn and experiment with deep learning projects that require GPU processing in a fully optimized setup.
 
 ## Environment Features
 
 - Based on the `tensorflow/tensorflow:2.17.0-gpu-jupyter` image.
-- GPU support enabled (requires NVIDIA Docker).
+- GPU support enabled.
 - Pre-configured non-root user (`vscode`) with `sudo` privileges.
-- Ready-to-use configuration with VS Code and installed extensions:
-  - Python
-  - Jupyter!
 
-## Included Files
+## Verifying GPU Support with `nvidia-smi`
 
-- **`Dockerfile`**: Contains the configuration to build the Docker image.
-- **`.devcontainer/devcontainer.json`**: Configures the remote development environment.
+To ensure that GPU support is properly configured, you can verify the availability of your GPU using the `nvidia-smi` command. Follow these steps:
 
-## Prerequisites
+1. Open a terminal inside the DevContainer environment.
+2. Run the following command:
 
-Before starting, ensure you have the following installed on your machine:
+   ```bash
+   nvidia-smi
+   ```
 
-1. [Docker](https://www.docker.com/)
-2. [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) (for GPU support)
-3. [Visual Studio Code](https://code.visualstudio.com/)
-4. [Remote - Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+3. If GPU support is correctly configured, you should see a table displaying information about your NVIDIA GPU, including its model, memory usage, and other details.<br>
 
-## Setup
-
-### 1. Clone the Repository
-
-Clone this repository to your local machine:
-
-```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_NAME>
+![alt text](nvidia-smi.png)
