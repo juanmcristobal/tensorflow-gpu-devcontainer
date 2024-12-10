@@ -15,10 +15,31 @@ To ensure that GPU support is properly configured, you can verify the availabili
 1. Open a terminal inside the DevContainer environment.
 2. Run the following command:
 
-   ```bash
+   ```
    nvidia-smi
    ```
 
-3. If GPU support is correctly configured, you should see a table displaying information about your NVIDIA GPU, including its model, memory usage, and other details.<br>
+3. If GPU support is correctly configured, you should see a table displaying information about your NVIDIA GPU, including its model, memory usage, and other details.
+
+<br>
 
 ![alt text](nvidia-smi.png)
+
+## Testing the Environment with Jupyter Notebook
+
+You can test the DevContainer environment by running the provided Jupyter Notebook file `test_devcontainer.ipynb`. This notebook contains a simple script to verify the functionality of TensorFlow and GPU support.
+
+### Steps to Run the Notebook
+
+1. Open the terminal inside the DevContainer environment.
+2. Start the Jupyter Notebook server by running:
+
+   ```
+   jupyter notebook
+   ```
+
+3. Once the server starts, open the link provided in the terminal in your web browser.
+4. Locate and open the [test_devcontainer.ipynb](./test_devcontainer.ipynb) file.
+5. Run the cells in the notebook to validate that TensorFlow is installed correctly and can detect the GPU.
+
+This notebook includes basic tests like checking TensorFlow's version and verifying GPU availability. It serves as a quick way to ensure your setup is ready for deep learning projects.
