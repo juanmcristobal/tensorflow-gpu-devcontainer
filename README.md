@@ -2,8 +2,7 @@
 
 This project provides a pre-configured development environment using **DevContainer**, based on a Python Docker image with TensorFlow and Jupyter pre-installed. It is ideal for projects requiring GPU processing and deep learning.
 
-[alt text](nvidia-smi.png)
-![alt text](../juanmcristobal.github.io/assets/img/dev-containers.png)
+![alt text](nvidia-smi.png)
 
 ## Environment Features
 
